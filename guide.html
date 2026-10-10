@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Melos – User guide</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fbf8f5; --fg:#1c1b1f; --muted:#605d66; --accent:#4650b0; --line:#d9d4dc; --card:#f1ecf4; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121214; --fg:#e6e1e5; --muted:#a9a5ae; --accent:#a8b1ff; --line:#3a373e; --card:#1d1b20; } }
+  :root[data-theme="dark"] { color-scheme: dark; --bg:#121214; --fg:#e6e1e5; --muted:#a9a5ae; --accent:#a8b1ff; --line:#3a373e; --card:#1d1b20; }
+  :root[data-theme="light"] { color-scheme: light; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:1.8rem; margin:0 0 4px; }
+  h2 { font-size:1.2rem; margin:36px 0 6px; color:var(--accent); scroll-margin-top:12px; }
+  p, li { margin:6px 0; } .muted { color:var(--muted); }
+  nav ul { list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 0; }
+  nav li { margin:0; } nav a { display:block; padding:4px 12px; border:1px solid var(--line); border-radius:16px; text-decoration:none; font-size:.9rem; }
+  a { color:var(--accent); }
+  code { background:var(--card); padding:1px 5px; border-radius:4px; font-size:.92em; }
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:6px 10px; text-align:left; } th { background:var(--card); }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Melos – User guide</h1>
+<p class="muted">Melos keeps your song guides and setlists for live gigs: lyrics, notes, scores, audio, and the setlists you play them in.</p>
+<nav><ul><li><a href="#songs">Songs</a></li><li><a href="#setlists">Setlists</a></li><li><a href="#live-mode">Live mode</a></li><li><a href="#moving-around">Moving around</a></li><li><a href="#sharing-import-and-backup">Sharing, import and backup</a></li><li><a href="#melos-free-and-melos-pro">Melos Free and Melos Pro</a></li><li><a href="#sync-across-your-devices-optional-melos-pro">Sync across your devices (optional, Melos Pro)</a></li><li><a href="#privacy">Privacy</a></li></ul></nav>
+<h2 id="songs">Songs</h2>
+<ul>
+<li>The <strong>Songs</strong> tab lists all your songs. Search at the top, or use the A–Z strip on the right.</li>
+<li><strong>Filter by artist:</strong> under the search box, a row of chips lists the artists in your library with a song count (up to six artists). With more artists it becomes a single <strong>Artists</strong> button that opens a searchable list. Tap an artist to see only their songs; clear it with the chip again, the ✕ next to it, or "All artists". It works together with the search, and the same chips are in the "Add songs" panel when you build a setlist. Names are compared ignoring capitals, extra spaces and a leading "The", so "The Beatles" and "beatles" count as one artist.</li>
+<li>Tap the vinyl button to add a song. Fill in title, artist, key, tempo (BPM), time signature, lyrics and notes. Don't know the tempo? Tap the <strong>Tap tempo</strong> pad on the beat: after the second tap it shows the tempo and fills in the BPM field (the last few taps are averaged, and a pause of two seconds starts a new count). A YouTube link is optional.</li>
+<li><strong>Files:</strong> attach audio, scores (PDF or images) and text notes. You can scan a paper score with the camera; the pages become one PDF.</li>
+<li><strong>Chords in notes:</strong> write a chord in square brackets, like <code>[Am]</code>, <code>[F#m7b5]</code> or <code>[D/F#]</code>, and it is shown as a highlighted chord (teal, without the brackets) in the song screen and in Live mode. While you type, the chord is coloured in the editor. The piano button in the notes toolbar inserts a pair of brackets for you (or wraps the selected text). Only real chords are recognised: <code>[Verse]</code> or <code>[Em7x]</code> stay plain text, and chords you write without brackets are never touched. If something that looks like a chord should stay plain text (say, a note that really is <code>[A]</code>), put the cursor on it and tap the crossed-out piano button: a backslash is added in front (and not shown); tap again to bring the highlight back.</li>
+<li><strong>Chords in lyrics:</strong> put chords in square brackets inside the lyrics, exactly where they change: <code>[G]Amazing [G7]grace</code>. In the song screen and in Live mode they are drawn above the right syllable. In the song editor, the <strong>Lyrics</strong> box has a piano button (inserts <code>[]</code> at the cursor, or the same on/off for a wrongly recognised chord as in the notes) and a row of chips: the chords already used in the song and the chords of its key to tap, or, as soon as you type <code>[F</code>, the chords that complete it (F, F7, Fm7, Fmaj7...). Lyrics without brackets are shown as before. Greek lyrics work like any other. If you type a chord on a Greek keyboard by mistake, Melos still understands it: the Greek letters that look like Latin ones (Α, Β, Ε, Μ and μ for m) are read as A, B, E, M and m.</li>
+<li><strong>Transposing in the editor (Melos Pro):</strong> the arrows button in the lyrics header rewrites every chord in the lyrics and the notes, and the key, by the number of semitones you choose (the dialog shows the new key). Sharps or flats follow the new key.</li>
+<li><strong>PDF chord sheet:</strong> the PDF button at the top of a song makes an A4 page with the lyrics and each chord exactly above its syllable (long lines wrap together with their chords). You can move the chords to another key just for the PDF, switch the chords off, and add the notes. For a setlist, the share button has a "Make a PDF chord sheet instead" link: one page per song, in setlist order. The PDF goes to the usual share sheet.</li>
+<li><strong>Notes</strong> can be formatted (bold, italic, sizes, colours, headings), split into sections such as Intro, Verse or Solo, and can contain rig cues for your pedals.</li>
+<li><strong>Scores:</strong> open a score to zoom, turn pages and write on it with a pen, marker or highlighter, or add text boxes. Your marks stay on the score.</li>
+<li><strong>Audio:</strong> a song can have several audio files; starting one pauses the others.</li>
+<li><strong>Rename or remove a file:</strong> long-press a file (score, scan, note or audio track) and choose <strong>Rename</strong> or <strong>Remove file</strong>. Renaming only changes the name shown in Melos.</li>
+<li>To delete a song, long-press it and confirm.</li>
+</ul>
+<h2 id="setlists">Setlists</h2>
+<ul>
+<li>The <strong>Setlists</strong> tab lists your setlists, grouped into <strong>projects</strong> (for example a band or a tour). Projects can be renamed and reordered.</li>
+<li>Tap the crate button to create a setlist. Open <strong>Add songs</strong> to pick from your library; drag the handle on that bar to show more or fewer songs. Drag songs to change their order.</li>
+<li>Long-press a setlist to delete it.</li>
+</ul>
+<h2 id="live-mode">Live mode</h2>
+<p>Tap <strong>Go live</strong> on a setlist to play it on stage. The screen stays on.</p>
+<ul>
+<li>Swipe sideways to move to the next or previous song.</li>
+<li>Choose what you see: <strong>Notes</strong>, <strong>Lyrics</strong>, <strong>Score</strong> or <strong>All</strong> (split view, with a draggable divider in landscape). The app remembers the view, text size and zoom for each song.</li>
+<li>A−/A+ change the text size of the part you last touched.</li>
+<li><strong>Chords in Live mode:</strong> next to the pedal button there is a piano button that shows or hides all chords (in the notes and the lyrics) for the whole session, and a <strong>Key</strong> button to move the chords up or down by semitones for this visit only (the key badge changes with them, the song itself is not changed, and it starts over with each visit).</li>
+<li><strong>Tempo pulse:</strong> the tempo pill in the header has a small ring that blinks on every beat, stronger and in the accent colour on the first beat of the bar (from the time signature). In 6/8, 9/8 and 12/8 the tempo counts the groups of three eighths, so 6/8 blinks twice per bar. It is silent: there is no click. <strong>Tap the pill to pause the blinking</strong> (a small pause sign shows in the ring) and tap it again to start it; while paused nothing runs, which also saves battery. The choice is remembered, and the blinking stops by itself when the app is in the background.</li>
+<li><strong>Tap the beat:</strong> the small bell beside the tempo pill works like the one in the song editor. Tap it a few times on the beat and the blinking follows your tempo; the pill turns into a tapped tempo with a small reset arrow (tapping the bell also starts the blinking if it was paused). This is only for now: the song's saved tempo never changes, and moving to another song or tapping the reset arrow brings the saved tempo back.</li>
+<li>The bar at the right end of the tabs hides or shows the controls.</li>
+</ul>
+<h2 id="moving-around">Moving around</h2>
+<ul>
+<li>Swipe left or right on the Songs / Setlists screens to switch between the two tabs.</li>
+<li>Inside a song or a setlist, swipe right to go back.</li>
+<li>The knob button at the top opens the menu: import, share, back up, account and sync, <strong>Help</strong> (this guide, available offline), theme (follow system, light, dark).</li>
+</ul>
+<h2 id="sharing-import-and-backup">Sharing, import and backup</h2>
+<ul>
+<li><strong>Share songs</strong> packs songs, or a whole setlist, into a <code>.setlist</code> file you can send to a band mate. You choose whether audio is included.</li>
+<li><strong>Import or restore a file</strong> opens a <code>.setlist</code> file (you can also open one from a message or Bluetooth). If a song already exists, you decide per song whether to replace it or keep both.</li>
+<li><strong>Back up everything</strong> saves your whole library as one <code>.setlist</code> file. Restore it with Import.</li>
+<li>These work with or without an online account.</li>
+</ul>
+<h2 id="melos-free-and-melos-pro">Melos Free and Melos Pro</h2>
+<p>Melos is free to download and use. <strong>Melos Pro</strong> is a one-time purchase (no subscription) that removes the limits and adds sync.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Free</th>
+<th>Pro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Songs in total</td>
+<td>up to 50</td>
+<td>unlimited</td>
+</tr>
+<tr>
+<td>Songs in one setlist</td>
+<td>up to 10</td>
+<td>unlimited</td>
+</tr>
+<tr>
+<td>Projects</td>
+<td>up to 2</td>
+<td>unlimited</td>
+</tr>
+<tr>
+<td>Sync across devices</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Live mode, scores and annotations, audio, scanner, sharing, import, backup</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Pro belongs to your Google Play account, so it unlocks on all your devices signed in to it. On a new device it is restored automatically; nothing to do.</li>
+<li>Nothing is ever removed or cut when you reach a limit. You simply cannot add more until you unlock Pro. If you have more than the free limit (for example after a refund), everything stays and works; you can still edit, delete, play and share it.</li>
+<li>Importing a <code>.setlist</code> file always brings in all its setlists and projects, even if they are longer or more than the free limits. Only the 50-song total can stop an import.</li>
+<li>Unlock it from the message that appears when you reach a limit, or from menu → <strong>Account and sync</strong>.</li>
+</ul>
+<h2 id="sync-across-your-devices-optional-melos-pro">Sync across your devices (optional, Melos Pro)</h2>
+<p>With Melos Pro, sign in with your Google account and your songs and setlists follow you to your other phones and tablets. They are stored in a private app folder on <strong>your own Google Drive</strong>. Only Melos can see that folder; it does not show up in your normal Drive files and it counts against your Drive storage.</p>
+<p><strong>Turn it on</strong></p>
+<ol>
+<li>Menu → <strong>Account and sync</strong> → <strong>Sign in with Google</strong>.</li>
+<li>Choose your account and allow access to the app's own Drive folder.</li>
+<li>Tap <strong>Sync now</strong> the first time. Do the same on your other devices.</li>
+</ol>
+<p><strong>What is synced</strong></p>
+<ul>
+<li>Always: songs, notes, lyrics, live layouts, setlists and projects.</li>
+<li>Your choice: <strong>Audio files</strong>, and <strong>Scores</strong> (PDF and images) with the marks you drew on them.</li>
+<li><strong>Large files on Wi-Fi only</strong> (on by default) keeps audio and scores off mobile data. Text always syncs.</li>
+</ul>
+<p><strong>When it syncs</strong></p>
+<p>With <strong>Sync automatically</strong> on, Melos syncs shortly after you change something, every few hours, and when you open the app. If you are offline, your changes are kept on the phone and sent as soon as you are back online. Everything works offline; sync is only for sharing between devices.</p>
+<p><strong>Good to know</strong></p>
+<ul>
+<li>If you change the same song on two devices, the most recent change wins for that whole song.</li>
+<li>If you delete a song or setlist, it is deleted on your other devices too. Keep a backup if unsure.</li>
+<li>A song that exists on two devices with the same title and artist is treated as the same song, so it is not duplicated.</li>
+<li>Turn audio or scores off and files already in Drive stay there; this device just stops fetching them. Turn them on again and they are downloaded on the next sync.</li>
+<li><strong>Sign out</strong> stops syncing on this phone. Your songs stay on the phone and in Drive.</li>
+<li>To remove the synced copy from Drive: Google Account → Data &amp; privacy → Third-party apps and services → Melos → delete its data.</li>
+</ul>
+<p><strong>If something fails</strong></p>
+<p>The Account and sync screen shows the result of the last sync. Check the internet connection, then tap <strong>Sync now</strong>. If it says Drive access needs your approval, sign in again.</p>
+<h2 id="privacy">Privacy</h2>
+<p>Everything is stored on your device. Purchases are handled by Google Play; Melos only learns whether you own Melos Pro. Only if you sign in for sync does Melos copy your songs, setlists, notes, annotations and the audio and score files you chose to your own Google Drive. Nothing is sent to any other server and nothing is shared with anyone.</p>
+<footer class="muted">Questions or feedback: <a href="mailto:vakilos.apps@gmail.com">vakilos.apps@gmail.com</a> · <a href="https://vakilos.github.io/melos-privacy/">Privacy policy</a></footer>
+</main>
+</body>
+</html>
