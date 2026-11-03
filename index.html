@@ -17,7 +17,7 @@
 <main>
 <p><a href="index.html">&larr; Melos home</a></p>
 <h1>Melos – Privacy Policy</h1>
-<p class="muted">Last updated: 30 October 2026</p>
+<p class="muted">Last updated: 3 November 2026</p>
 
 <p>Melos is an Android app for managing song guides and setlists for live gigs and rehearsals, with a companion web app, <strong>Melos Companion</strong>, for preparing songs on a computer. This policy explains what happens to your data when you use them. The short version: your data stays on your devices, and nothing is sent to the developer.</p>
 
@@ -47,6 +47,9 @@
 <h2>Purchases</h2>
 <p>Melos Pro is a one-time purchase handled entirely by Google Play. Melos never sees your payment details. The app only learns from Google Play whether this account owns Melos Pro, and keeps that answer on your device so it works offline.</p>
 
+<h2>Chords written by hand</h2>
+<p>With Melos Pro you can write chords by hand in a chord chart. To read them, Melos uses Google's ML Kit Digital Ink Recognition, which runs on your device. The first time you choose to write, Melos asks before it downloads ML Kit's handwriting model (about 20 MB) from Google; nothing is downloaded if you don't. After that, recognition works without the internet: what you write is read on your phone and is never sent anywhere, and only the chords it was read as are kept, in your notes. When you use it, ML Kit sends Google diagnostic information about how it works: the device model and Android version, the app's and the model's versions, the language set up for handwriting, how long recognition took and any error codes, along with identifiers ML Kit uses for this. It never includes what you write or anything from your songs and notes. Google uses it to keep ML Kit working and to improve it, sends it encrypted and does not pass it on to third parties (see Google's ML Kit data disclosure and Google's Privacy Policy). Melos and its developer never receive it.</p>
+
 <h2>Document scanner</h2>
 <p>The "scan" function uses Google's ML Kit Document Scanner, provided through Google Play services. Scanning is processed on your device. The resulting pages are saved as a PDF inside Melos on your device.</p>
 
@@ -69,7 +72,7 @@
 <p>Google Play may give the developer anonymous technical reports (for example crashes and performance) for users who have chosen to share diagnostics with Google. These contain no songs or personal content.</p>
 
 <h2>Network use</h2>
-<p>Melos connects to the internet only to talk to Google (sending to phones nearby uses no internet): for sign-in and Drive sync (if you use them) and for purchases through Google Play. A YouTube link you add to a song opens in your YouTube app or browser only when you tap it.</p>
+<p>Melos connects to the internet only to talk to Google (sending to phones nearby uses no internet): for sign-in and Drive sync (if you use them), for purchases through Google Play, and, once and only if you choose to write chords by hand, to download the handwriting model. A YouTube link you add to a song opens in your YouTube app or browser only when you tap it.</p>
 
 <h2>Sharing files</h2>
 <p>When you share songs or make a backup, Melos creates a <code>.setlist</code> file and hands it to the app you choose (for example email or Bluetooth). A shared setlist can take its show along (date, times, place and rehearsals) if you choose; the fee and your notes are never put in a shared setlist, only in a backup of everything. What happens to the file after that is up to you and that app. Importing a file only reads it on your device.</p>
